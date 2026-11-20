@@ -373,21 +373,23 @@
     .project-showcase[data-ready] .work-card::before { content: none; }
     .project-showcase[data-ready] .work-frame {
       width: min(100% - var(--edge) * 2, 1464px, (100svh - 184px) * 2);
-      pointer-events: none;
-      animation: var(--showcase-link) steps(1, end) both;
-      animation-timeline: --projects;
-      animation-range: contain;
     }
 
     .project-showcase[data-ready] .work-info {
       position: relative;
       z-index: 1;
-      animation: var(--showcase-info) ease-in-out both;
+      animation: var(--showcase-label) steps(1, end) both, var(--showcase-info) ease-in-out both;
       animation-timeline: --projects;
       animation-range: contain;
     }
 
-    .project-showcase[data-ready] .work-window { overflow: clip; }
+    .project-showcase[data-ready] .work-window {
+      overflow: clip;
+      pointer-events: auto;
+      animation: var(--showcase-window) ease-in-out both;
+      animation-timeline: --projects;
+      animation-range: contain;
+    }
     .project-showcase[data-ready] .work-card .work-media {
       overflow: visible;
       animation: var(--showcase-media) ease-in-out both;
@@ -403,22 +405,25 @@
 
     #noir-detailing {
       --showcase-stop: 0;
-      --showcase-link: showcase-noir-link;
+      --showcase-label: showcase-noir-label;
       --showcase-info: showcase-noir-info;
+      --showcase-window: showcase-noir-window;
       --showcase-media: showcase-noir-media;
       --showcase-phone: showcase-noir-phone;
     }
     #club-barber {
       --showcase-stop: .5;
-      --showcase-link: showcase-club-link;
+      --showcase-label: showcase-club-label;
       --showcase-info: showcase-club-info;
+      --showcase-window: showcase-club-window;
       --showcase-media: showcase-club-media;
       --showcase-phone: showcase-club-phone;
     }
     #altair {
       --showcase-stop: 1;
-      --showcase-link: showcase-altair-link;
+      --showcase-label: showcase-altair-label;
       --showcase-info: showcase-altair-info;
+      --showcase-window: showcase-altair-window;
       --showcase-media: showcase-altair-media;
       --showcase-phone: showcase-altair-phone;
     }
@@ -428,58 +433,71 @@
   }
 }
 
-/* Exchange the complete project at the midpoint of each background blend. */
-@keyframes showcase-noir-link {
+/* Keep one readable set of links while both previews share a moving edge. */
+@keyframes showcase-noir-label {
   0% { opacity: 1; pointer-events: auto; }
   31%, 100% { opacity: 0; pointer-events: none; }
 }
-@keyframes showcase-club-link {
+@keyframes showcase-club-label {
   0%, 68%, 100% { opacity: 0; pointer-events: none; }
   31% { opacity: 1; pointer-events: auto; }
 }
-@keyframes showcase-altair-link {
+@keyframes showcase-altair-label {
   0% { opacity: 0; pointer-events: none; }
   68%, 100% { opacity: 1; pointer-events: auto; }
 }
 
 @keyframes showcase-noir-info {
-  0%, 25% { transform: none; opacity: 1; }
-  31%, 100% { transform: translateX(-16px); opacity: .35; }
+  0%, 25% { transform: none; }
+  37%, 100% { transform: translateX(-8px); }
 }
 @keyframes showcase-club-info {
-  0%, 31% { transform: translateX(16px); opacity: .35; }
-  37%, 62% { transform: none; opacity: 1; }
-  68%, 100% { transform: translateY(-12px); opacity: .35; }
+  0%, 25% { transform: translateX(8px); }
+  37%, 62% { transform: none; }
+  74%, 100% { transform: translateY(-8px); }
 }
 @keyframes showcase-altair-info {
-  0%, 68% { transform: translateY(12px); opacity: .35; }
-  74%, 100% { transform: none; opacity: 1; }
+  0%, 62% { transform: translateY(8px); }
+  74%, 100% { transform: none; }
+}
+
+@keyframes showcase-noir-window {
+  0%, 25% { clip-path: inset(0); }
+  37%, 100% { clip-path: inset(0 100% 0 0); }
+}
+@keyframes showcase-club-window {
+  0%, 25%, 74%, 100% { clip-path: inset(0 0 0 100%); }
+  37%, 62% { clip-path: inset(0); }
+}
+@keyframes showcase-altair-window {
+  0%, 62% { clip-path: inset(0 100% 0 0); }
+  74%, 100% { clip-path: inset(0); }
 }
 
 @keyframes showcase-noir-media {
-  0%, 25% { transform: none; opacity: 1; }
-  31%, 100% { transform: translate3d(-4%, 0, 0) scale(.92); opacity: .36; }
+  0%, 25% { transform: none; }
+  37%, 100% { transform: translate3d(-2%, 0, 0) scale(.96); }
 }
 @keyframes showcase-club-media {
-  0%, 31% { transform: translate3d(4%, 0, 0) scale(.92); opacity: .36; }
-  37%, 62% { transform: none; opacity: 1; }
-  68%, 100% { transform: translate3d(0, -5%, 0) scale(.94); opacity: .27; }
+  0%, 25% { transform: translate3d(2%, 0, 0) scale(.96); }
+  37%, 62% { transform: none; }
+  74%, 100% { transform: translate3d(0, -2%, 0) scale(.96); }
 }
 @keyframes showcase-altair-media {
-  0%, 68% { transform: translate3d(0, 5%, 0) scale(.94); opacity: .23; }
-  74%, 100% { transform: none; opacity: 1; }
+  0%, 62% { transform: translate3d(0, 2%, 0) scale(.96); }
+  74%, 100% { transform: none; }
 }
 
 @keyframes showcase-noir-phone {
   0%, 25% { translate: none; }
-  31%, 100% { translate: 11% 4%; }
+  37%, 100% { translate: 11% 4%; }
 }
 @keyframes showcase-club-phone {
-  0%, 31% { translate: -11% 4%; }
+  0%, 25% { translate: -11% 4%; }
   37%, 62% { translate: none; }
-  68%, 100% { translate: 0 6%; }
+  74%, 100% { translate: 0 6%; }
 }
 @keyframes showcase-altair-phone {
-  0%, 68% { translate: 0 -6%; }
+  0%, 62% { translate: 0 -6%; }
   74%, 100% { translate: none; }
 }

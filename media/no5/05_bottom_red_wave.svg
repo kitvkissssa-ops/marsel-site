@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420" role="img" aria-label="Декоративная красная волна">
+<defs><linearGradient id="w" x1="0" y1="0" x2="1" y2=".8"><stop stop-color="#3d0714" stop-opacity=".8"/><stop offset=".28" stop-color="#bc1734" stop-opacity=".92"/><stop offset=".62" stop-color="#f83450" stop-opacity=".86"/><stop offset="1" stop-color="#420d1d" stop-opacity=".17"/></linearGradient><linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff5162"/><stop offset=".42" stop-color="#ff2947"/><stop offset="1" stop-color="#962037" stop-opacity=".15"/></linearGradient></defs>
+<path d="M0 190C160 205 215 315 395 333C575 350 657 182 833 204C1008 225 1120 304 1280 244C1435 185 1513 155 1600 168L1600 420H0Z" fill="url(#w)"/>
+<path d="M0 190C160 205 215 315 395 333C575 350 657 182 833 204C1008 225 1120 304 1280 244C1435 185 1513 155 1600 168" fill="none" stroke="url(#edge)" stroke-width="4"/>
+<path d="M0 275C180 318 289 363 476 332C666 302 734 267 914 280C1142 295 1303 346 1600 260" stroke="#fa4660" stroke-opacity=".22" stroke-width="1.6" fill="none"/>
+</svg>

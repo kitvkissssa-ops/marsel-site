@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="90" viewBox="0 0 470 90" role="img" aria-label="Marsel Web">
+<defs><linearGradient id="r" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff4557"/><stop offset="1" stop-color="#a8152c"/></linearGradient></defs>
+<path d="M44 6Q47 5 50 7L77 24Q80 26 80 32V63Q80 67 75 70L48 86Q44 88 40 86L13 70Q9 68 9 63V32Q9 26 13 24Z" fill="url(#r)"/>
+<path d="M18 65C22 25 30 28 38 58C44 81 48 27 57 24C69 21 65 58 69 67" fill="none" stroke="#160c13" stroke-width="11" stroke-linecap="round"/>
+<text x="104" y="56" font-family="Arial,Helvetica,sans-serif" letter-spacing="7" font-size="28" fill="#f4ece9">MARSEL WEB</text></svg>

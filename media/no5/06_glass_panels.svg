@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="570" viewBox="0 0 720 570" role="img" aria-label="Две полупрозрачные стеклянные панели">
+<defs><linearGradient id="back" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e0bdc8" stop-opacity=".16"/><stop offset=".55" stop-color="#e8acbd" stop-opacity=".06"/><stop offset="1" stop-color="#ce677e" stop-opacity=".12"/></linearGradient><linearGradient id="front" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fae0e6" stop-opacity=".09"/><stop offset=".51" stop-color="#f5a8b9" stop-opacity=".17"/><stop offset="1" stop-color="#bf2b4c" stop-opacity=".13"/></linearGradient></defs>
+<path d="M340 46Q343 34 358 32L613 5Q632 3 628 21L592 224Q590 238 574 241L328 283Q310 287 314 268Z" fill="url(#back)" stroke="#f2cad2" stroke-opacity=".62" stroke-width="2"/>
+<path d="M35 385Q39 370 56 368L557 285Q578 281 575 302L544 485Q542 502 523 507L17 560Q-1 562 2 545Z" fill="url(#front)" stroke="#f7cbd5" stroke-opacity=".75" stroke-width="2"/>
+</svg>

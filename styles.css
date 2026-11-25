@@ -198,8 +198,8 @@ summary { list-style: none; }
 .plan-head { grid-area: head; }
 .plan-head h3 { font-size: clamp(1.5rem, 2.25vw, 2.125rem); font-weight: 650; max-width: 20ch; line-height: 1.16; letter-spacing: -.025em; }
 .plan-head p { max-width: 46ch; margin-top: 8px; color: var(--muted); }
-.plan-offer { grid-area: offer; display: grid; gap: 16px; }
-.plan-price { font-size: 1rem; font-weight: 650; line-height: 1.4; overflow-wrap: anywhere; }
+.plan-offer { grid-area: offer; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.plan-price { font-size: .9375rem; font-weight: 650; line-height: 1.4; overflow-wrap: anywhere; }
 .plan-includes { grid-area: includes; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 24px; list-style: none; padding: 0; }
 .plan li { display: flex; align-items: start; gap: 8px; color: var(--muted); }
 .plan li svg { flex: 0 0 14px; width: 14px; height: 14px; margin-top: 5px; color: var(--accent); }
